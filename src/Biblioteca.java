@@ -108,9 +108,14 @@ public class Biblioteca {
         return true;
     }
 
+    // @return Cantidad total de libros en el ArrayList
+    public int getTotalLibros(){
+        return libros.size();
+    }
 
 
-    // Lógica del negocio de aqui hacia abajo y vista por consola
+
+    // Lógica del negocio de aqui hacia abajo y vista por consola (Creado antes)
 
     // Read - Leer libros
     public void listarLibros(){
