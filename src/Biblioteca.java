@@ -113,8 +113,6 @@ public class Biblioteca {
         return libros.size();
     }
 
-
-
     // Lógica del negocio de aqui hacia abajo y vista por consola (Creado antes)
 
     // Read - Leer libros
