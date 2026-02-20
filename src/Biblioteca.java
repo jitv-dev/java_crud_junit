@@ -46,7 +46,7 @@ public class Biblioteca {
     READ - Buscar un libro por ID
     return si el libro existe o null si no lo encuentra
      */
-    public Libro buscarLibroPorID(int id){
+    public Libro buscarLibroPorId(int id){
         return encontrarLibroPorId(id);
     }
 
@@ -54,7 +54,7 @@ public class Biblioteca {
     READ - Buscar libro por titulo
     return lista de libros coincidentes
      */
-    public List<Libro> buscarLibroPorTitulo(String texto){
+    public List<Libro> buscarLibrosPorTitulo(String texto){
         List<Libro> resultado = new ArrayList<>();
         for (Libro libro : libros){
             if (libro.getTitulo().toLowerCase().contains(texto.toLowerCase())){
@@ -94,14 +94,14 @@ public class Biblioteca {
     /*
     Prestar y devolver libro para test
      */
-    public boolean prestarLogicaLibro(int id){
+    public boolean prestarLibroLogica(int id){
         Libro libro = encontrarLibroPorId(id);
         if (libro == null || libro.isPrestado()) return false;
         libro.setPrestado(true);
         return true;
     }
 
-    public boolean devolverLogicaLibro(int id){
+    public boolean devolverLibroLogica(int id){
         Libro libro = encontrarLibroPorId(id);
         if (libro == null || !libro.isPrestado()) return false;
         libro.setPrestado(false);
